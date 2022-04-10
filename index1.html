@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+   <div class="Derecelendirme_ekrani">
+
+        <div class="tek-yidiz">
+            <img src="images/icon-star.svg">
+        </div>
+
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+            offering!</p>
+
+        <div class="derecelendirme_butonlari">
+            <button onclick="deger_butonu_tiklandiginda(0)" class="varsayilan_deger">1</button>
+            <button onclick="deger_butonu_tiklandiginda(1)" class="varsayilan_deger">2</button>
+            <button onclick="deger_butonu_tiklandiginda(2)" class="varsayilan_deger">3</button>
+            <button onclick="deger_butonu_tiklandiginda(3)" class="varsayilan_deger">4</button>
+            <button onclick="deger_butonu_tiklandiginda(4)" class="varsayilan_deger">5</button>
+        </div>
+
+        <button class="submit_butonu" onclick="submit_butonu_tiklandiginda()">SUBMIT</button>
+
+    </div>
+
+    <div class="tesekkur_kart" id="thankyou">
+
+        <div>
+            <img src="images/illustration-thank-you.svg" id="imgScale">
+        </div>
+
+        <div class="bes_uzerinden_not"><p>You selected&nbsp;</p> <p id="secim_sonucu">&nbsp;</p> <p>&nbsp;out of 5</p></div>
+
+        <h1 id="txtH1">Thank you!</h1>
+        <p id="txtP">We appreciate you taking the time to give a rating. If you ever need more support,
+        don't hesitate to get in touch!</p>
+
+    </div>
+
+</div>
+<script>
+
+    let derecelendirmeButonlari = document.getElementsByClassName("derecelendirme_butonlari")[0].children 
+    let ilk_ekran = document.getElementsByClassName('Derecelendirme_ekrani')[0]
+    let tesekkur_ekrani = document.getElementsByClassName('tesekkur_kart')[0]
+    let secilmisDeger = false
+
+    function deger_butonu_tiklandiginda(secim) {
+
+        kullanicininSecimi = secim
+
+        for (let i = 0; i < 5; i++) {
+          
+            if (secim === i){
+                klasDegistir(derecelendirmeButonlari[i])
+                secilmisDeger = true
+            } else {
+                klasSifirla(derecelendirmeButonlari[i])
+            }
+        }
+
+    }
+
+    function klasDegistir(item) {
+        item.classList.add('secilmis_deger')
+    }
+
+    function klasSifirla(item) {
+        item.classList.remove('secilmis_deger')
+    }
+
+    function submit_butonu_tiklandiginda() {
+
+        if (secilmisDeger) {
+            ilk_ekran.style.display = 'none'
+            tesekkur_ekrani.style.display = 'flex'
+            document.getElementById('secim_sonucu').innerHTML = kullanicininSecimi + 1 
+        } else {
+            window.alert('Please select a rating!')
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

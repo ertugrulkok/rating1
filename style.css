@@ -1,0 +1,155 @@
+
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141519;
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 97vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.Derecelendirme_ekrani {
+    height: auto;
+    width: 50vh;
+    background: rgb(34, 41, 51);
+    background: linear-gradient(180deg, rgb(34, 41, 51) 0%, rgb(15, 22, 31) 100%);
+    border-radius: 5%;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 5, 0.5);
+    align-items: flex-start;
+    padding: 4vh;
+}
+
+.Derecelendirme_ekrani h1 {
+    color: white;
+    font-size: 4vh;
+    font-weight: 700;
+}
+
+.Derecelendirme_ekrani p {
+    color: #7c8798;
+    font-size: 2.1vh;
+    line-height: 140%;
+}
+
+.tek-yidiz {
+    display: flex;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    background-color: #252d37;
+    justify-content: center;
+    align-items: center;
+}
+
+.tek-yidiz img {
+    flex-shrink: 1;
+    width: 2.4vh;
+}
+
+.derecelendirme_butonlari {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin: 4vh 0;
+}
+
+.varsayilan_deger {
+    background-color: #252d37;
+    color: #7c8798;
+    width: 6.4vh;
+    height: 6.4vh;
+    border: 0;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 2vh;
+    transition: 0.5s ease;
+}
+
+.secilmis_deger {
+    background-color: #7c8798;
+    color: #ffffff;
+    transition: 0.5s ease;
+}
+
+.derecelendirme_butonlari button:hover {
+    background-color: rgba(124, 135, 152, 0.7);
+    color: white;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.submit_butonu {
+    border: 0;
+    width: 100%;
+    height: 6vh;
+    background-color: #fb7413;
+    color: white;
+    font-size: 2vh;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 50vh;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+
+.submit_butonu:hover {
+    background-color: white;
+    color: #fb7413;
+    transition: 0.5s ease-in-out;
+}
+
+.tesekkur_kart {
+    display: none ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 50vh;
+    background: linear-gradient(180deg, rgb(34, 41, 51) 0%, rgb(15, 22, 31) 100%);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 5, 0.5);
+    padding: 4vh;
+    border-radius: 5%;
+}
+
+.bes_uzerinden_not {
+    display: flex;
+    background-color: #252d37;
+    color: #fb7413;
+    width: auto;
+    height: auto;
+    padding: 0 2vh;
+    border-radius: 5vh;
+    font-size: 2.0vh;
+    margin: 3vh;
+    text-align: center;
+}
+
+#imgScale {
+    width: auto;
+    height: 15vh;
+}
+
+#txtH1 {
+    color: white;
+    font-size: 4vh;
+    font-weight: 700;
+    margin: 0;
+}
+
+#txtP {
+    color: #7c8798;
+    font-size: 2.1vh;
+    line-height: 140%;
+    text-align: center;
+}
